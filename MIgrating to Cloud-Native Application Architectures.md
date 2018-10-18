@@ -48,7 +48,11 @@ needs of stability, availability, and durability.
     which transfers the burden of service aggregation back to the server-side.
       
 Defining Cloud-Native Architectures
-* Twelve-Factor Applications
+* Twelve-Factor Applications - https://12factor.net/
+    In the context of twelve-factor, application (or app) refers to a single
+    deployable unit. Organizations will often refer to multiple collaborating
+    deployables as an application. In this context, however, we will
+    refer to these multiple collaborating deployables as a distributed system.
 * Microservices
 * Self-Service Agile Infrastructure
 * API-Based Collaboration
