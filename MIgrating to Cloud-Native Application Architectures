@@ -47,5 +47,10 @@ needs of stability, availability, and durability.
     notion of mobile-first development through design patterns such as the API Gateway, 
     which transfers the burden of service aggregation back to the server-side.
       
-
+Defining Cloud-Native Architectures
+* Twelve-Factor Applications
+* Microservices
+* Self-Service Agile Infrastructure
+* API-Based Collaboration
+* Antifragility
  
