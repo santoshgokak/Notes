@@ -34,7 +34,18 @@ needs of stability, availability, and durability.
         and provide a reasonable level of service to our customers while we’re
         engaging in the process of identification and recovery.
 
- • Scale - 
+ • Scale - Applications must be architected differently for horizontal rather than vertical
+    scale. The elasticity of the cloud demands ephemerality. Not only
+    must we be able to create new application instances quickly; we
+    must also be able to dispose of them quickly and safely. This need is
+    a question of state management: how does the disposable interact
+    with the persistent? Application need to be stateless and externalize state to in-memory data grids, caches, 
+    and persistent object stores,
+    
+• Client Diversity - Huge diversity in mobile platforms has also placed demands on
+    application architectures.Cloud-native application architectures also support the 
+    notion of mobile-first development through design patterns such as the API Gateway, 
+    which transfers the burden of service aggregation back to the server-side.
       
 
  
