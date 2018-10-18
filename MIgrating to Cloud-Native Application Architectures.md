@@ -49,6 +49,7 @@ needs of stability, availability, and durability.
       
 Defining Cloud-Native Architectures
 * Twelve-Factor Applications - https://12factor.net/
+
     In the context of twelve-factor, application (or app) refers to a single
     deployable unit. Organizations will often refer to multiple collaborating
     deployables as an application. In this context, however, we will
