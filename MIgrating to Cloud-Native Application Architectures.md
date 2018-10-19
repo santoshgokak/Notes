@@ -110,6 +110,32 @@ The theory behind this reorganization is the famous observation known as Conway�
     If we follow the Inverse Conway Maneuver, we’ll start with the domain model for the organization, and seek to identify business capabilities that can be encapsulated within bounded contexts (which we’ll cover in “Decomposing Data”). Once we identify these capabilities, we create business capability teams to own them throughout their useful lifecycle. Business capability teams own the entire development-to-operations lifecycle for their applications.
     
 ### The Platform Operations Team
-    Owns self-service agile infrastructure.
-    This team typically includes the traditional system, network, and storage administrator roles.
-    Rather than queuing up requests for application environments and data services to be provisioned, business capability teams are able to take the leaner approach of building automated release pipelines that provision environments and services on-demand.
+    
+   Owns self-service agile infrastructure.
+   This team typically includes the traditional system, network, and storage administrator roles.
+   Rather than queuing up requests for application environments and data services to be provisioned, business capability teams are able to take the leaner approach of building automated release pipelines that provision environments and services on-demand.
+
+### Technical Change
+
+   * Decomposing Monoliths
+      Traditional n-tier, monolithic enterprise applications rarely operate well when deployed to cloud infrastructure and they are not very compatible with the idea of elastic and ephemeral infrastructure.
+      
+   * Decomposing Data
+      If business capability teams are supposedly autonomous but are forced to collaborate via a single data store, the monolithic barrier to innovation is simply relocated.
+      Our success is largely governed by the quality of our domain model (and the ubiquitous language that underpins it). For a domain model to be effective, it must also be internally consistent—we should not find terms or concepts with inconsistent definitions within the same model.
+      Bounded contexts allow you to keep inconsistent definitions of a single concept across the organization, as long as they are defined consistently within the contexts themselves.
+      We define our bounded contexts, assign them a set of business capabilities, commission capability teams to own those business capabilities, and have them build twelve-factor applications. The fact that these applications are independently deployable provides business capability teams with a useful set of technical tools for operation.
+      Decomposition allows for the application of polyglot persistence, or choosing different data stores based on data shape and read/write access patterns. However, data must often be recomposed via event-driven techniques in order to ask cross-context questions. Techniques such as command query responsibility segregation (CQRS) and event sourcing, beyond the scope of this report, are often helpful when synchronizing similar concepts across contexts.
+      IMPOTANT : Twelve-factor is primarily a technical specification, whereas microservices are primarily a business specification. 
+      
+* Containerization
+    Containers leverage modern Linux kernel primitives such as control groups (cgroups) and namespaces to provide similar resource allocation and isolation features as those provided by virtual machines with much less overhead and much greater portability.
+    
+* From Orchestration to Choreography
+    Enterprise integration of services has traditionally been accomplished via the enterprise service bus (ESB). The ESB becomes the owner of all routing, transformation, policy, security, and other decisions governing the interaction between services. We call this orchestration, analogous to the conductor who determines the course of the music performed by an orchestra during its performance.
+    
+    Cloud-native architectures, such as microservices, tend to prefer choreography, akin to dancers in a ballet. Rather than placing the smarts in the integration mechanism, they are placed in the endpoints, akin to the dumb pipes and smart filters of the Unix architecture.Services adapt to changing circumstances in their environment via patterns such as client-side load balancing (“Routing and Load Balancing”) and circuit breakers (“Fault-Tolerance”).
+    IMP : Choreography simply acknowledges and exposes the essential complexity of the system. 
+    Teams are able to adapt to their changing circumstances without the difficult overhead of coordinating with other teams, and avoid the overhead of coordinating changes with a centrally-managed ESB.
+    
+All of these changes create autonomous units that are able to safely move at the desired rate of innovation.    
