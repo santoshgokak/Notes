@@ -77,3 +77,8 @@ Defining Cloud-Native Architectures
   Can we build architectures that way? Adopters of cloud-native architectures have sought to build them. One example is the Netflix Simian Army project, with the famous submodule “Chaos Monkey,” which injects random failures into production components with the goal of identifying and eliminating weaknesses in the architecture. 
  
 ## Changes Needed
+Reduce waste.
+Lean principles translates easily in sw dev.
+This will help orgs embrace the cultural and organizational transformations that revolve 
+around eliminating structures, processes, and activities that create waste.
+
