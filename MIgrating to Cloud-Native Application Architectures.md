@@ -50,12 +50,23 @@ needs of stability, availability, and durability.
 Defining Cloud-Native Architectures
 * Twelve-Factor Applications - https://12factor.net/
 
+    The patterns describe an application archetype that optimizes for the
+    “why” of cloud-native application architectures. They focus on speed, safety, and scale 
+    by emphasizing declarative configuration, stateless/shared-nothing processes 
+    that horizontally scale, and an overall loose coupling to the deployment environment. 
+     
     In the context of twelve-factor, application (or app) refers to a single
     deployable unit. Organizations will often refer to multiple collaborating
     deployables as an application. In this context, however, we will
     refer to these multiple collaborating deployables as a distributed system.
 * Microservices
+  Microservices represent the decomposition of monolithic business systems into independently deployable services that do “one thing well.” That one thing usually represents a business capability, or the smallest, “atomic” unit of service that delivers business value.
+  
 * Self-Service Agile Infrastructure
+  Teams developing cloud-native application architectures are typically responsible 
+  for their deployment and ongoing operations. Successful adopters of cloud-native
+  applications have empowered teams with self-service platforms.
+  
 * API-Based Collaboration
 * Antifragility
  
