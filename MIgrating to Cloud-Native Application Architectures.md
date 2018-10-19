@@ -82,3 +82,34 @@ Lean principles translates easily in sw dev.
 This will help orgs embrace the cultural and organizational transformations that revolve 
 around eliminating structures, processes, and activities that create waste.
 
+### Cultural Change
+* From Silos to DevOps
+     Development’s mission is usually viewed as delivering additional value to the organization through the development of software features. These features, by their very nature, introduce change into the IT ecosystem. So development’s mission can be described as “delivering change,” and is very often incentivized around how much change it delivers.
+     IT operations is usually tasked with maintaining the desired levels of availability, resiliency, performance, and durability of IT systems. Therefore they are very often incentivized to maintain key perfomance indicators (KPIs) such as mean time between failures (MTBF) and mean time to recovery (MTTR).
+     DevOps represents the idea of tearing down these silos and building shared toolsets, vocabularies, and communication structures in service of a culture focused on a single goal: delivering value rapidly and safely. 
+     Incentive structures are then created that reinforce and award behaviors that lead the organization in the direction of that goal.
+     
+* From Punctuated Equilibrium to Continuous Delivery     
+    Rather than punctuated equilibrium driven by a waterscrumfall organization, we embrace the principles of value from end to end. A useful model for envisioning such a lifecycle is the idea of “Concept to Cash” described by Mary and Tom Poppendieck in their book Implementing Lean Software Development (Addison-Wesley). This approach considers all of the activities necessary to carry a business idea from its conception to the point where it generates profit, and constructs a value stream aligning people and process toward the optimal achievement of that goal.
+    
+* Centralized Governance to Decentralized Autonomy
+    Architectural committees often only assemble periodically, and long waiting queues of work often ensue. Even small data model changes—changes that could be implemented in minutes or hours, and that would be readily approved by the committee—lay wasting in an ever-growing stack of to-do items.
+    The teams building cloud-native applications (“Business Capability Teams”) own all facets of the capability they’re charged with delivering. They own and govern the data, the technology stack, the application architecture, the design of individual components, and the API contract delivered to the remainder of the organization. If a decision needs to be made, it’s made and executed upon autonomously by the team.The decentralization and autonomy of individual teams is balanced by minimal, lightweight structures that are imposed on the integration patterns used between independently developed and deployed services (e.g., they prefer HTTP REST JSON APIs rather than many different styles of RPC). 
+
+### Organizational Change
+The theory behind this reorganization is the famous observation known as Conway’s Law. Our solution is to create a team combining staff with many disciplines around each long-term product, instead of segregating staff that have a single discipline in each own team, such as testing.
+
+* Business Capability Teams
+    
+
+    Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure. - Melvyn Conway
+    
+    Try https://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver
+    Rather than building an architecture that matches their org chart, they determine the architecture they want and restructure their organization to match that architecture. If you do that, according to Conway, the architecture that you desire will eventually emerge.
+    Teams are organized as cross-functional, business capability teams that develop products rather than projects. Products are long-lived efforts that continue until they no longer provide value to the business.
+    If we follow the Inverse Conway Maneuver, we’ll start with the domain model for the organization, and seek to identify business capabilities that can be encapsulated within bounded contexts (which we’ll cover in “Decomposing Data”). Once we identify these capabilities, we create business capability teams to own them throughout their useful lifecycle. Business capability teams own the entire development-to-operations lifecycle for their applications.
+    
+### The Platform Operations Team
+    Owns self-service agile infrastructure.
+    This team typically includes the traditional system, network, and storage administrator roles.
+    Rather than queuing up requests for application environments and data services to be provisioned, business capability teams are able to take the leaner approach of building automated release pipelines that provision environments and services on-demand.
