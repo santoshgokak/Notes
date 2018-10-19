@@ -1,4 +1,4 @@
-Rise of Cloud-Native
+# Rise of Cloud-Native
   What do these innovative companies have in common?
   * Speed of innovation
   * Always-available services
@@ -9,7 +9,7 @@ Rise of Cloud-Native
  and storage resources can be provisioned and released elastically in an on-demand, 
  self-service manner.
  
- Why Cloud-Native Application Architectures?
+ ## Why Cloud-Native Application Architectures?
  * Speed - Businesses that are able to innovate, experiment, and deliver software-based 
  solutions quickly are outcompeting those that follow more traditional delivery models.
  Why are frequent deployments impor tant? 
@@ -66,7 +66,14 @@ Defining Cloud-Native Architectures
   Teams developing cloud-native application architectures are typically responsible 
   for their deployment and ongoing operations. Successful adopters of cloud-native
   applications have empowered teams with self-service platforms.
+  Contract compliance can be verified on both sides of a service-to-service interaction 
+  via consumer-driven contracts. 
   
 * API-Based Collaboration
+  The sole mode of interaction between services in a cloud-native application architecture is via published and versioned APIs. 
+  
 * Antifragility
+  The quality of a system that gets stronger when subjected to stressors. 
+  Can we build architectures that way? Adopters of cloud-native architectures have sought to build them. One example is the Netflix Simian Army project, with the famous submodule “Chaos Monkey,” which injects random failures into production components with the goal of identifying and eliminating weaknesses in the architecture. 
  
+## Changes Needed
